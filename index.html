@@ -390,13 +390,14 @@ function listener()
 function triggerX()
 {
 	setTimeout(trigger,50,jump_1_addr);
-	setTimeout(showMsg,2000,"<h2><span style='color:red'>Failed to load setup file. Close the browser and try again.</span></h2>");
+	setTimeout(showMsg,2000,"<h2><span style='color:red'>No se pudo cargar el archivo de instalación. Cierra el navegador e inténtalo de nuevo.</span></h2>");
 	t_out=0;
 	total_loops=0;
 }
 function HFWmsg()
 {
 	showMsg("<h2><span style='color:red'>¡Debe instalar el firmware híbrido (HFW) 4.90 antes de usar este instalador!</h2></span>");
+	showMsg("<h2><span style='color:red'>Sino sabes como visita el canal de Youtube Nanospeedgamer</h2></span>");
 	throw new Error('');
 }
 if(fwv=="4.90"){initROP(true)}else{HFWmsg()}
